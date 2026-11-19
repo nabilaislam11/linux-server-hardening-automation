@@ -10,8 +10,8 @@ if ! sshd -t; then
   exit 1
 fi
 echo "== Effective SSH configuration =="
-echo "Note: Match blocks can vary by connection context; inspect with sshd -T -C when applicable."
+echo "Match blocks can vary by connection context; inspect with sshd -T -C when applicable."
 sshd -T | awk '
   $1 ~ /^(permitrootlogin|passwordauthentication|pubkeyauthentication|permitemptypasswords|x11forwarding|maxauthtries|loglevel|allowusers|allowgroups|authenticationmethods)$/ {print}
 '
-echo "Review the effective policy against your organization\x27s approved baseline."
+echo "Review the effective policy against the approved security baseline."
