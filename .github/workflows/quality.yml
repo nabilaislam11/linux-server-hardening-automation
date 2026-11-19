@@ -5,7 +5,7 @@ on:
 permissions:
   contents: read
 jobs:
-  lint:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,3 +13,5 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y shellcheck
       - name: Validate scripts
         run: bash scripts/validate.sh
+      - name: Smoke tests
+        run: bash tests/smoke.sh
