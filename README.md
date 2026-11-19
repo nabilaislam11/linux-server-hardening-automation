@@ -57,10 +57,6 @@ docs/
   quality.yml
 ```
 
-## Security
-
-Never commit host inventories, internal addresses, credentials, tokens, SSH private keys, operational logs, or organization-specific configurations. Review all output before sharing. See [SECURITY.md](SECURITY.md).
-
 ## License
 
 MIT — see [LICENSE](LICENSE).
