@@ -27,7 +27,7 @@ bash scripts/patch-preflight.sh
 bash scripts/validate.sh
 ```
 
-Scripts are read-only by default. Review output before implementing configuration changes.
+The scripts run in read-only mode by default and report findings for review.
 
 ## Patch workflow
 
